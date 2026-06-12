@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Spurs vs Knicks — StubHub Prices (Groups of 4)</title>
+  <style>
+    :root {
+      --an-ink: #111827;
+      --an-muted: #5b6471;
+      --an-line: #dde5dd;
+      --an-soft: #f4faf6;
+      --an-soft-2: #eaf6ee;
+      --an-green: #00c853;
+      --an-green-dark: #009640;
+      --an-dark: #08120d;
+      --an-yellow: #ffcf33;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      color: var(--an-ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
+    .an-section {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid var(--an-line);
+      overflow: hidden;
+    }
+    .an-section-head {
+      padding: 22px 26px 18px;
+      background: linear-gradient(180deg, #f4faf6 0%, #ffffff 100%);
+      border-bottom: 1px solid var(--an-line);
+    }
+    .an-eyebrow {
+      display: inline-block;
+      margin: 0 0 10px;
+      padding: 5px 8px;
+      background: #07130d;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .an-section-head h2 {
+      margin: 0 0 8px;
+      font-size: 26px;
+      line-height: 1.06;
+      letter-spacing: -.035em;
+      color: var(--an-ink);
+    }
+    .an-section-head p {
+      margin: 0;
+      max-width: 980px;
+      color: var(--an-muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .an-accent {
+      display: block;
+      width: 68px;
+      height: 4px;
+      margin-top: 13px;
+      background: var(--an-green);
+    }
+    .an-stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      padding: 18px 20px;
+      background: #fff;
+      border-bottom: 1px solid var(--an-line);
+    }
+    .an-stat {
+      padding: 12px;
+      border: 1px solid var(--an-line);
+      background: var(--an-soft);
+    }
+    .an-stat span {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--an-muted);
+      font-size: 10.5px;
+      line-height: 1.2;
+      font-weight: 900;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .an-stat strong {
+      display: block;
+      font-size: 20px;
+      line-height: 1.05;
+      letter-spacing: -.03em;
+      color: var(--an-ink);
+    }
+    .an-stat em {
+      display: block;
+      margin-top: 5px;
+      color: var(--an-muted);
+      font-size: 11.5px;
+      line-height: 1.25;
+      font-style: normal;
+    }
+    .an-copy {
+      padding: 18px 26px 4px;
+    }
+    .an-table-card {
+      width: 100%;
+      max-width: 100%;
+      margin: 14px auto 0;
+      background: #fff;
+      border-top: 1px solid var(--an-line);
+      border-bottom: 1px solid var(--an-line);
+      overflow: hidden;
+    }
+    .an-table-capture {
+      background: #fff;
+    }
+    .an-table-head {
+      position: relative;
+      display: block;
+      padding: 18px 22px 15px;
+      background: linear-gradient(180deg, #f4faf6 0%, #ffffff 100%);
+      border-bottom: 1px solid var(--an-line);
+    }
+    .an-title-wrap {
+      min-width: 0;
+      width: 100%;
+    }
+    .an-table-card h3 {
+      margin: 0 0 7px;
+      max-width: 980px;
+      font-size: 21px;
+      line-height: 1.12;
+      letter-spacing: -.025em;
+      color: var(--an-ink);
+    }
+    .subtitle {
+      margin: 0;
+      max-width: 980px;
+      color: var(--an-muted);
+      font-size: 13px;
+      line-height: 1.42;
+    }
+    .tools {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: nowrap;
+      padding: 9px 18px;
+      background: #f4faf6;
+      border-bottom: 1px solid var(--an-line);
+    }
+    .tools-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    button {
+      appearance: none;
+      border: 1px solid rgba(0,0,0,.1);
+      background: #fff;
+      color: var(--an-ink);
+      font: inherit;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1;
+      padding: 9px 12px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #f8faf8;
+    }
+    .primary {
+      background: var(--an-green);
+      border-color: var(--an-green);
+      color: #07130d;
+    }
+    .primary:hover {
+      background: #08d85d;
+    }
+    .status {
+      position: absolute;
+      left: 14px;
+      bottom: 2px;
+      color: var(--an-muted);
+      font-size: 10px;
+      font-weight: 700;
+      min-height: 0;
+    }
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      background: #fff;
+      scrollbar-width: thin;
+      scrollbar-color: var(--an-green) #eaf6ee;
+    }
+    .table-wrap::-webkit-scrollbar {
+      height: 8px;
+    }
+    .table-wrap::-webkit-scrollbar-track {
+      background: #eaf6ee;
+    }
+    .table-wrap::-webkit-scrollbar-thumb {
+      background: var(--an-green);
+      border-radius: 999px;
+      border: 2px solid #eaf6ee;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .wide-table {
+      min-width: 750px;
+    }
+    thead th {
+      background: #09150f;
+      color: #fff;
+      text-align: left;
+      padding: 10px 12px;
+      font-size: 10.5px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      letter-spacing: .045em;
+      border-right: 1px solid rgba(255,255,255,.13);
+    }
+    thead th.sortable {
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+      padding-right: 22px;
+    }
+    thead th.sortable::after {
+      content: "↕";
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255,255,255,.55);
+      font-size: 11px;
+    }
+    thead th.sortable.sorted-asc::after {
+      content: "↑";
+      color: var(--an-green);
+    }
+    thead th.sortable.sorted-desc::after {
+      content: "↓";
+      color: var(--an-green);
+    }
+    tbody td {
+      padding: 12px 12px;
+      border-top: 1px solid var(--an-line);
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    tbody tr:nth-child(even) {
+      background: #fbfdfb;
+    }
+    .rank {
+      width: 45px;
+      text-align: center;
+      color: #009640;
+      font-weight: 950;
+    }
+    .game-cell strong {
+      display: block;
+      font-size: 13px;
+      color: var(--an-ink);
+    }
+    .game-cell span {
+      display: block;
+      margin-top: 3px;
+      color: var(--an-muted);
+      font-size: 12px;
+    }
+    .foot {
+      padding: 8px 18px;
+      border-top: 1px solid var(--an-line);
+      color: var(--an-muted);
+      font-size: 11px;
+      line-height: 1.4;
+    }
+    .an-method {
+      margin: 14px 12px 12px;
+      padding: 13px 14px;
+      background: #07130d;
+      color: #fff;
+    }
+    .an-method h3 {
+      margin: 0 0 7px;
+      font-size: 15px;
+      letter-spacing: -.02em;
+    }
+    .an-method p {
+      margin: 0;
+      color: rgba(255,255,255,.8);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    @media (max-width: 640px) {
+      .an-section-head { padding: 16px 16px 14px; }
+      .an-section-head h2 { font-size: 22px; }
+      .an-stat-grid { grid-template-columns: 1fr; gap: 8px; }
+      .an-copy { padding: 14px 16px 4px; }
+      .an-table-head { padding: 14px 14px 12px; }
+      .an-table-head h3 { font-size: 18px; }
+      tools { padding: 7px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="an-mobile-scroll-shell" data-mobile-scroll-shell>
+    <section class="an-section" aria-label="NBA Finals Resale Inventory Grid">
+      
+      <header class="an-section-head">
+        <span class="an-eyebrow">Market Tracker</span>
+        <h2>Spurs vs Knicks — StubHub Prices (Groups of 4)</h2>
+        <p>
+          Real-time tracking asset analyzing secondary market listed resale positions for groups of four connected seats across the 2026 NBA Finals schedule.
+        </p>
+        <span class="an-accent" aria-hidden="true"></span>
+      </header>
+
+      <div class="an-stat-grid">
+        <div class="an-stat">
+          <span>Finals Market Entry Floor</span>
+          <strong>$1,655.35</strong>
+          <em>Game 1 Group Ticket Minimum</em>
+        </div>
+        <div class="an-stat">
+          <span>Peak Listing Premium</span>
+          <strong>$194,225.01</strong>
+          <em>Game 2 Madison Square Garden Ceiling</em>
+        </div>
+        <div class="an-stat">
+          <span>Blended Series Average</span>
+          <strong>$18,034.39</strong>
+          <em>Full 3-Game Package Base</em>
+        </div>
+      </div>
+
+      <article class="an-table-card">
+        <div id="capture-finals-tracker" class="an-table-capture">
+          <div class="an-table-head">
+            <div class="an-title-wrap">
+              <h3>2026 NBA Finals Resale Pricing Index</h3>
+              <p class="subtitle">Comprehensive market metrics tracking public secondary marketplace listings requiring exactly four adjacent tickets.</p>
+            </div>
+          </div>
+
+          <div class="tools">
+            <div class="tools-left">
+              <button class="primary" onclick="copyEmbed(this)">Copy Embed Code</button>
+              <button onclick="downloadImage(this)">Download Image</button>
+            </div>
+            <span class="status" aria-live="polite"></span>
+          </div>
+
+          <div class="table-wrap" role="region" aria-label="NBA Finals Market Matrix Table" tabindex="0">
+            <table class="wide-table">
+              <thead>
+                <tr>
+                  <th class="sortable" data-type="number" style="width:50px;">#</th>
+                  <th class="sortable" data-type="text">Scheduled Leg Matchup</th>
+                  <th class="sortable" data-type="number">Active Listings</th>
+                  <th class="sortable" data-type="money">Lowest Price ($)</th>
+                  <th class="sortable" data-type="money">Average Price ($)</th>
+                  <th class="sortable" data-type="money">Highest Price ($)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="rank">1</td>
+                  <td class="game-cell"><strong>Game 1 — Spurs (Home)</strong><span>June 13, 2026</span></td>
+                  <td>101</td>
+                  <td>$1,655.35</td>
+                  <td>$7,216.77</td>
+                  <td>$82,897.48</td>
+                </tr>
+                <tr>
+                  <td class="rank">2</td>
+                  <td class="game-cell"><strong>Game 2 — Knicks (Home)</strong><span>June 16, 2026</span></td>
+                  <td>143</td>
+                  <td>$13,499.76</td>
+                  <td>$35,579.45</td>
+                  <td>$194,225.01</td>
+                </tr>
+                <tr>
+                  <td class="rank">3</td>
+                  <td class="game-cell"><strong>Game 3 — Spurs (Home)</strong><span>June 19, 2026</span></td>
+                  <td>105</td>
+                  <td>$4,152.43</td>
+                  <td>$11,306.95</td>
+                  <td>$52,563.16</td>
+                </tr>
+                <tr style="background: var(--an-soft); border-top: 2px solid var(--an-line);">
+                  <td class="rank" style="color: var(--an-green-dark)">Σ</td>
+                  <td class="game-cell"><strong style="color: var(--an-green-dark)">SERIES (All 3 Games)</strong><span>Cumulative Summary Matrix</span></td>
+                  <td><strong>349</strong></td>
+                  <td><strong>$6,435.85</strong></td>
+                  <td><strong>$18,034.39</strong></td>
+                  <td><strong>$109,895.22</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="foot">
+            Marketplace Notice: Resale positions change dynamically based on real-time transaction clearing. Reported data sets indicate public marketplace trends compiled at the specified tracking deadline.
+          </div>
+        </div>
+      </article>
+
+      <div class="an-method">
+        <h3>Methodology & Currency Parameters</h3>
+        <p>
+          Metrics are collected directly from public StubHub inventory streams. Structural constraints require configurations filtering exactly four connected seats. Captured properties evaluate row designations, seating coordinates, and base marketplace valuations. Exchange operations process primary pricing points recorded in GBP and calculate current USD trends through a verified multi-bank Frankfurter API framework at a conversion multiplier of 1.3382.
+        </p>
+      </div>
+
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script>
+    function parseCellValue(cell, type) {
+      const text = (cell.innerText || cell.textContent || '').trim();
+      if (type === 'money' || type === 'number') {
+        const num = parseFloat(text.replace(/[^0-9.-]/g, ''));
+        return Number.isNaN(num) ? 0 : num;
+      }
+      return text.toLowerCase();
+    }
+
+    document.querySelectorAll('th.sortable').forEach((th, columnIndex) => {
+      th.addEventListener('click', () => {
+        const table = th.closest('table');
+        const tbody = table.querySelector('tbody');
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        const type = th.dataset.type || 'text';
+        
+        // Don't sort the summary row
+        const dataRows = rows.filter(r => !r.style.background);
+        const summaryRow = rows.find(r => r.style.background);
+        const isAsc = th.classList.contains('sorted-asc');
+        
+        table.querySelectorAll('th.sortable').forEach(h => h.classList.remove('sorted-asc', 'sorted-desc'));
+        th.classList.add(isAsc ? 'sorted-desc' : 'sorted-asc');
+
+        dataRows.sort((a, b) => {
+          const aVal = parseCellValue(a.children[columnIndex], type);
+          const bVal = parseCellValue(b.children[columnIndex], type);
+          return isAsc ? (aVal > bVal ? -1 : 1) : (aVal > bVal ? 1 : -1);
+        });
+
+        tbody.innerHTML = "";
+        dataRows.forEach(row => tbody.appendChild(row));
+        if (summaryRow) tbody.appendChild(summaryRow);
+      });
+    });
+
+    function copyEmbed(btn) {
+      const currentUrl = window.location.href.split('?')[0];
+      const snippet = `<div style="max-width:980px;margin:0 auto;"><iframe src="${currentUrl}" width="100%" height="680" style="border:1px solid #dde5dd;overflow:hidden;" scrolling="auto"></iframe></div>`;
+      navigator.clipboard.writeText(snippet).then(() => {
+        const status = btn.closest('.tools').querySelector('.status');
+        status.textContent = "Production layout block code copied to clipboard.";
+        setTimeout(() => status.textContent = "", 2500);
+      });
+    }
+
+    function downloadImage(btn) {
+      const container = document.getElementById('capture-finals-tracker');
+      const status = btn.closest('.tools').querySelector('.status');
+      status.textContent = "Processing full data table canvas map...";
+      
+      html2canvas(container, { scale: 2, backgroundColor: "#ffffff" }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'nba-finals-market-tracker-2026.png';
+        link.href = canvas.toDataURL();
+        link.click();
+        status.textContent = "PNG vector file generated successfully.";
+        setTimeout(() => status.textContent = "", 2500);
+      });
+    }
+  </script>
+</body>
+</html>
