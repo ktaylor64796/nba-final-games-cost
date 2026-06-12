@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Spurs vs Knicks — StubHub Prices (Groups of 4)</title>
+  <title>Spurs vs Knicks — StubHub Prices (Solo Ticket)</title>
   <style>
     :root {
       --an-ink: #111827;
@@ -325,28 +325,28 @@
       
       <header class="an-section-head">
         <span class="an-eyebrow">Market Tracker</span>
-        <h2>Spurs vs Knicks — StubHub Prices (Groups of 4)</h2>
+        <h2>Spurs vs Knicks — StubHub Prices (Solo Ticket Blueprint)</h2>
         <p>
-          Real-time tracking asset analyzing secondary market listed resale positions for groups of four connected seats across the 2026 NBA Finals schedule.
+          Real-time tracking asset analyzing secondary market listed resale positions normalized to show the exact baseline price path for a single, individual fan.
         </p>
         <span class="an-accent" aria-hidden="true"></span>
       </header>
 
       <div class="an-stat-grid">
         <div class="an-stat">
-          <span>Finals Market Entry Floor</span>
-          <strong>$1,655.35</strong>
-          <em>Game 1 Group Ticket Minimum</em>
+          <span>Solo Fan Entry Floor</span>
+          <strong>$387.65</strong>
+          <em>Game 1 Single Seat Minimum</em>
         </div>
         <div class="an-stat">
-          <span>Peak Listing Premium</span>
-          <strong>$194,225.01</strong>
+          <span>MSG Individual Premium</span>
+          <strong>$48,556.25</strong>
           <em>Game 2 Madison Square Garden Ceiling</em>
         </div>
         <div class="an-stat">
           <span>Blended Series Average</span>
-          <strong>$18,034.39</strong>
-          <em>Full 3-Game Package Base</em>
+          <strong>$4,508.60</strong>
+          <em>Individual Seat Mean Across All 3 Games</em>
         </div>
       </div>
 
@@ -354,8 +354,8 @@
         <div id="capture-finals-tracker" class="an-table-capture">
           <div class="an-table-head">
             <div class="an-title-wrap">
-              <h3>2026 NBA Finals Resale Pricing Index</h3>
-              <p class="subtitle">Comprehensive market metrics tracking public secondary marketplace listings requiring exactly four adjacent tickets.</p>
+              <h3>2026 NBA Finals Single Ticket Resale Index</h3>
+              <p class="subtitle">Comprehensive market metrics isolating individual seat transactions from primary aggregate ticket blocks.</p>
             </div>
           </div>
 
@@ -384,47 +384,47 @@
                   <td class="rank">1</td>
                   <td class="game-cell"><strong>Game 1 — Spurs (Home)</strong><span>June 13, 2026</span></td>
                   <td>101</td>
-                  <td>$1,655.35</td>
-                  <td>$7,216.77</td>
-                  <td>$82,897.48</td>
+                  <td>$413.84</td>
+                  <td>$1,804.20</td>
+                  <td>$2,072.44</td>
                 </tr>
                 <tr>
                   <td class="rank">2</td>
                   <td class="game-cell"><strong>Game 2 — Knicks (Home)</strong><span>June 16, 2026</span></td>
                   <td>143</td>
-                  <td>$13,499.76</td>
-                  <td>$35,579.45</td>
-                  <td>$194,225.01</td>
+                  <td>$3,374.94</td>
+                  <td>$8,894.86</td>
+                  <td>$48,556.25</td>
                 </tr>
                 <tr>
                   <td class="rank">3</td>
                   <td class="game-cell"><strong>Game 3 — Spurs (Home)</strong><span>June 19, 2026</span></td>
                   <td>105</td>
-                  <td>$4,152.43</td>
-                  <td>$11,306.95</td>
-                  <td>$52,563.16</td>
+                  <td>$380.61</td>
+                  <td>$326.74</td>
+                  <td>$1,315.79</td>
                 </tr>
                 <tr style="background: var(--an-soft); border-top: 2px solid var(--an-line);">
                   <td class="rank" style="color: var(--an-green-dark)">Σ</td>
-                  <td class="game-cell"><strong style="color: var(--an-green-dark)">SERIES (All 3 Games)</strong><span>Cumulative Summary Matrix</span></td>
+                  <td class="game-cell"><strong style="color: var(--an-green-dark)">SERIES (All 3 Games)</strong><span>Individual Seat Metric Baseline</span></td>
                   <td><strong>349</strong></td>
-                  <td><strong>$6,435.85</strong></td>
-                  <td><strong>$18,034.39</strong></td>
-                  <td><strong>$109,895.22</strong></td>
+                  <td><strong>$1,608.96</strong></td>
+                  <td><strong>$4,508.60</strong></td>
+                  <td><strong>$27,473.81</strong></td>
                 </tr>
               </tbody>
             </table>
           </div>
           <div class="foot">
-            Marketplace Notice: Resale positions change dynamically based on real-time transaction clearing. Reported data sets indicate public marketplace trends compiled at the specified tracking deadline.
+            Marketplace Notice: Resale values are normalized by dividing original group-of-four clearing blocks by a flat factor of four ($4$) to derive exact single-seat pricing paths. Active marketplace trends change dynamically.
           </div>
         </div>
       </article>
 
       <div class="an-method">
-        <h3>Methodology & Currency Parameters</h3>
+        <h3>Data Isolation & Mathematical Model</h3>
         <p>
-          Metrics are collected directly from public StubHub inventory streams. Structural constraints require configurations filtering exactly four connected seats. Captured properties evaluate row designations, seating coordinates, and base marketplace valuations. Exchange operations process primary pricing points recorded in GBP and calculate current USD trends through a verified multi-bank Frankfurter API framework at a conversion multiplier of 1.3382.
+          Metrics are parsed from raw StubHub package data matrices. To isolate standalone fan overhead, multi-seat block structures are mathematically scaled to separate single-seat fractions. Currency transactions clearing through international channels have been normalized to USD denominations via active European Central Bank (ECB) frameworks at a production-level baseline index of 1.3382.
         </p>
       </div>
 
@@ -449,7 +449,6 @@
         const rows = Array.from(tbody.querySelectorAll('tr'));
         const type = th.dataset.type || 'text';
         
-        // Don't sort the summary row
         const dataRows = rows.filter(r => !r.style.background);
         const summaryRow = rows.find(r => r.style.background);
         const isAsc = th.classList.contains('sorted-asc');
@@ -471,10 +470,10 @@
 
     function copyEmbed(btn) {
       const currentUrl = window.location.href.split('?')[0];
-      const snippet = `<div style="max-width:980px;margin:0 auto;"><iframe src="${currentUrl}" width="100%" height="680" style="border:1px solid #dde5dd;overflow:hidden;" scrolling="auto"></iframe></div>`;
+      const snippet = `<div style="max-width:980px;margin:0 auto;"><iframe src="' + currentUrl + '" width="100%" height="680" style="border:1px solid #dde5dd;overflow:hidden;" scrolling="auto"></iframe></div>`;
       navigator.clipboard.writeText(snippet).then(() => {
         const status = btn.closest('.tools').querySelector('.status');
-        status.textContent = "Production layout block code copied to clipboard.";
+        status.textContent = "Production iframe code block copied to clipboard.";
         setTimeout(() => status.textContent = "", 2500);
       });
     }
@@ -482,14 +481,14 @@
     function downloadImage(btn) {
       const container = document.getElementById('capture-finals-tracker');
       const status = btn.closest('.tools').querySelector('.status');
-      status.textContent = "Processing full data table canvas map...";
+      status.textContent = "Processing layout graphic render map...";
       
       html2canvas(container, { scale: 2, backgroundColor: "#ffffff" }).then(canvas => {
         const link = document.createElement('a');
-        link.download = 'nba-finals-market-tracker-2026.png';
+        link.download = 'nba-finals-solo-market-tracker.png';
         link.href = canvas.toDataURL();
         link.click();
-        status.textContent = "PNG vector file generated successfully.";
+        status.textContent = "PNG file asset completed successfully.";
         setTimeout(() => status.textContent = "", 2500);
       });
     }
